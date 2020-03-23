@@ -15,7 +15,7 @@ class SecondActivity : AppCompatActivity() {
     }
 
     private fun configureButton(){
-        button2.setOnClickListener(){
+        button.setOnClickListener(){
             val int = Intent(this, ThirdActivity::class.java)
             startActivity(int)
         }
