@@ -111,6 +111,10 @@ class Dashboard : AppCompatActivity() {
             }
         }
 
+        btn_help.setOnClickListener{
+            val intent = Intent(applicationContext, HelpAndDocumentation::class.java)
+            startActivity(intent)
+        }
 
 
     }

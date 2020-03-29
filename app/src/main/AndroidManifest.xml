@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InputPassword"></activity>
+        <activity android:name=".HelpAndDocumentation"></activity>
+        <activity android:name=".InputPassword" />
         <activity android:name=".SetupPassword" />
         <activity android:name=".InputPin" />
         <activity android:name=".SetupPin" />
