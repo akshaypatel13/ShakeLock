@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/icon"
+    tools:context=".Dashboard">
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/pass">
+
+                    <com.felipecsl.gifimageview.library.GifImageView
+                        android:id="@+id/gifImageView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:scaleType="centerCrop" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="250dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <ScrollView
+                        android:id="@+id/scroll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true">
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="5dp"
+                            android:alignmentMode="alignMargins"
+                            android:columnCount="2"
+                            android:columnOrderPreserved="false"
+                            android:rowCount="4">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="170dp"
+                                android:layout_height="170dp"
+                                android:layout_margin="10dp"
+                                app:cardBackgroundColor="#2d2d2d"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="5dp">
+
+                                <Button
+                                    android:id="@+id/btn_pattern"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#00000000"
+
+                                    />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/pic1"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_marginTop="5dp"
+                                        android:src="@drawable/pat"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="Pattern"
+                                        android:textSize="18sp" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="170dp"
+                                android:layout_height="170dp"
+                                android:layout_margin="10dp"
+                                app:cardBackgroundColor="#2d2d2d"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="5dp">
+
+                                <Button
+                                    android:id="@+id/btn_pin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#00000000" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/img_pin"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_marginTop="5dp"
+                                        android:src="@drawable/pat" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="Pin"
+                                        android:textSize="18sp" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="170dp"
+                                android:layout_height="170dp"
+                                android:layout_margin="10dp"
+                                app:cardBackgroundColor="#2d2d2d"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="5dp">
+
+                                <Button
+                                    android:id="@+id/btn_finger"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#00000000" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+
+                                    <ImageView
+                                        android:id="@+id/img_finger"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_marginTop="5dp"
+                                        android:src="@drawable/pat" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="Fingerprint"
+                                        android:textSize="18sp" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="170dp"
+                                android:layout_height="170dp"
+                                android:layout_margin="10dp"
+                                app:cardBackgroundColor="#2d2d2d"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="5dp">
+
+                                <Button
+                                    android:id="@+id/btn_password"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#00000000" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/img_pass"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_marginTop="5dp"
+                                        android:src="@drawable/pat" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="Password"
+                                        android:textSize="18sp" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="170dp"
+                                android:layout_height="170dp"
+                                android:layout_margin="10dp"
+                                app:cardBackgroundColor="#2d2d2d"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="5dp">
+
+                                <Button
+                                    android:id="@+id/btn_security"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#00000000" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+
+                                    <ImageView
+                                        android:id="@+id/img_security"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_marginTop="5dp"
+                                        android:src="@drawable/pat" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="Security Questions"
+                                        android:textSize="18sp" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="170dp"
+                                android:layout_height="170dp"
+                                android:layout_margin="10dp"
+                                app:cardBackgroundColor="#2d2d2d"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="5dp">
+
+                                <Button
+                                    android:id="@+id/btn_rst_pass"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#00000000" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/img_rst_pass"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_marginTop="5dp"
+                                        android:src="@drawable/pat" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="Reset Password"
+                                        android:textSize="18sp" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="170dp"
+                                android:layout_height="170dp"
+                                android:layout_margin="10dp"
+                                app:cardBackgroundColor="#2d2d2d"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="5dp">
+
+                                <Button
+                                    android:id="@+id/btn_help"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#00000000" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/img_help"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_marginTop="5dp"
+                                        android:src="@drawable/pat" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="Helpation"
+                                        android:textSize="18sp" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                        </GridLayout>
+
+                    </ScrollView>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+</RelativeLayout>

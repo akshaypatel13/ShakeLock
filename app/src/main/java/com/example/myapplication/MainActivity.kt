@@ -1,98 +1,51 @@
-package com.example.shakelock
+package com.example.myapplication
 
-import android.Manifest
-import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
-import android.net.Uri
-import android.os.Bundle
-import android.os.Environment
-import android.widget.Toast
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import com.example.shakelock.MyEncrypter
-import com.karumi.dexter.Dexter
-import com.karumi.dexter.MultiplePermissionsReport
-import com.karumi.dexter.PermissionToken
-import com.karumi.dexter.listener.PermissionRequest
-import com.karumi.dexter.listener.multi.MultiplePermissionsListener
+import android.os.Bundle
+import android.os.Handler
+import android.view.Window
+import android.view.WindowManager
+import android.view.animation.AnimationUtils
+import android.widget.TextView
+import org.apache.commons.io.IOUtils
+import java.io.IOException
+import java.io.InputStream
 import kotlinx.android.synthetic.main.activity_main.*
-import java.io.*
+
+
+//https://www.youtube.com/watch?v=JLIFqqnSNmg
+
+
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var myDir:File
-
-    companion object{
-        private val FILE_NAME_ENC = "L1_MobileExperience.pdf"
-        private val FILE_NAME_ENC_2 = "L0_MobileExperience.pdf"
-        private val FILE_NAME_DEC = "L0_MobileExperience.pdf"
-        private val key = "I4p2qn2SnvLirArz"
-        private val specString = "o5nOWzvsJvfR0b6g"
-    }
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
         setContentView(R.layout.activity_main)
+        var slogan = findViewById<TextView>(R.id.slogan)
+        var name = findViewById<TextView>(R.id.appname)
+        val bot_anim = AnimationUtils.loadAnimation(this, R.anim.bottom)
+        name.startAnimation(bot_anim)
+        slogan.startAnimation(bot_anim)
+        try {
+            var inp_st: InputStream = assets.open("splash4.gif")
+            var bts: ByteArray = IOUtils.toByteArray(inp_st)
+            gifImageView.setBytes(bts)
+            gifImageView.startAnimation()
 
-        Dexter.withActivity(this)
-                .withPermissions(*arrayOf(
-                        Manifest.permission.READ_EXTERNAL_STORAGE,
-                        Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                )
-                .withListener(object: MultiplePermissionsListener {
-                    override fun onPermissionsChecked(report: MultiplePermissionsReport?) {
-                        btn_dec.isEnabled = true
-                        btn_enc.isEnabled = true
-                    }
 
-                    override fun onPermissionRationaleShouldBeShown(
-                            permissions: MutableList<PermissionRequest>?,
-                            token: PermissionToken?
-                    ) {
-                        Toast.makeText(this@MainActivity, "Yo should accept permissions",Toast.LENGTH_SHORT).show()
+        } catch (exc: IOException) {
 
-                    }
-
-                }).check();
-
-        val root = Environment.getExternalStorageDirectory().toString()
-        myDir = File("$root/saved_images")
-        if(!myDir.exists())
-            myDir.mkdirs()
-        btn_enc.setOnClickListener{
-            //convert drawable to bitmap
-            val encFile=File(myDir, FILE_NAME_DEC)
-            val input = FileInputStream(encFile)
-            val outputFileEnc = File(myDir, FILE_NAME_ENC) // create empty file
-            try{
-                MyEncrypter.encryptToFile(key, specString, input,FileOutputStream(outputFileEnc))
-                Toast.makeText( this@MainActivity,"Encrypted",Toast.LENGTH_SHORT).show()
-                encFile.delete()
-            }
-            catch(e:Exception)
-            {
-                e.printStackTrace()
-            }
         }
-
-        btn_dec.setOnClickListener{
-            val outputFileDec=File(myDir, FILE_NAME_ENC_2)//empty file dec
-            val encFile=File(myDir, FILE_NAME_ENC)//get enc file
-            try {
-                MyEncrypter.decryptToFile(key,specString, FileInputStream(encFile),FileOutputStream(outputFileDec))
-                //set for image view
-                //imageView.setImageURI(Uri.fromFile(outputFileDec))
-                //if you want to delete drawable decrypted delete below line
-                encFile.delete()
-                Toast.makeText(this@MainActivity,"decryted",Toast.LENGTH_SHORT).show()
-            }
-            catch(e:Exception)
-            {
-                e.printStackTrace()
-            }
-        }
-
+        Handler().postDelayed({
+            val intent = Intent(this, AppIntro::class.java)
+            startActivity(intent)
+        }, 2000)
     }
 }
-

@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">ShakeLock</string>
+    <string name="care_to_be_aware">Care to be Aware!</string>
+
 </resources>
