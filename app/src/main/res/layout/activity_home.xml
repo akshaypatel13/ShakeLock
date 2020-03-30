@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".Home">
 
+    <Button
+        android:id="@+id/fileBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="376dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
