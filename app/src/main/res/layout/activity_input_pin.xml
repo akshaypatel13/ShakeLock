@@ -4,14 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_bgd"
     tools:context=".InputPin">
+
+    <com.felipecsl.gifimageview.library.GifImageView
+        android:id="@+id/gifImage3"
+        android:layout_width="199dp"
+        android:layout_height="176dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="32dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.andrognito.pinlockview.IndicatorDots
         android:id="@+id/ind_dots_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="264dp"
+        android:layout_marginTop="51dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="57dp"
         app:dotDiameter="12dp"
@@ -19,7 +36,7 @@
         app:layout_constraintBottom_toTopOf="@+id/pin_input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/gifImage2" />
 
     <com.andrognito.pinlockview.PinLockView
         android:id="@+id/pin_input"
@@ -35,6 +52,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:pinLength="4" />
+        app:pinLength="4"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="40dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

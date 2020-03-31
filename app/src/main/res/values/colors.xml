@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimary">#2d2d2d</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="errorColor">#ff9494</color>
@@ -8,6 +8,7 @@
     <color name="greyish">#aaa8a8</color>
     <color name="mine_shaft">#303030</color>
     <color name="icon">#282F3B</color>
+    <color name="app_bgd">#121726</color>
 
 
     <color name="Primary">#282F3B</color>

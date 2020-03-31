@@ -4,15 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_bgd"
     tools:context=".SetupPin">
 
+
+    <com.felipecsl.gifimageview.library.GifImageView
+        android:id="@+id/gifImage6"
+        android:layout_width="199dp"
+        android:layout_height="176dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="32dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.andrognito.pinlockview.IndicatorDots
         android:id="@+id/ind_dots_setup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="225dp"
+        android:layout_marginTop="272dp"
         android:layout_marginEnd="30dp"
         app:dotDiameter="12dp"
         app:dotSpacing="16dp"
@@ -37,6 +54,8 @@
         app:keypadDeleteButtonPressedColor="#C8C8C8"
         app:keypadTextColor="#E6E6E6"
         app:keypadTextSize="15dp"
-        app:pinLength="4"/>
+        app:pinLength="4"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="30dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

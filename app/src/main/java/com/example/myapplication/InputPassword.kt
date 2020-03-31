@@ -8,7 +8,11 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_input_password.*
+import kotlinx.android.synthetic.main.activity_input_pattern.*
 import kotlinx.android.synthetic.main.activity_setup_password.submit
+import org.apache.commons.io.IOUtils
+import java.io.IOException
+import java.io.InputStream
 
 class InputPassword : AppCompatActivity() {
 
@@ -16,7 +20,13 @@ class InputPassword : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_input_password)
 
-
+        try{
+            var inp_st: InputStream =assets.open("app.gif")
+            var bts:ByteArray= IOUtils.toByteArray(inp_st)
+            gifImage1.setBytes(bts)
+            gifImage1.startAnimation()
+        }catch(exc: IOException){
+        }
 
 
         password_reenter_input.addTextChangedListener(object: TextWatcher {
@@ -58,4 +68,5 @@ class InputPassword : AppCompatActivity() {
         }
 
     }
+
 }

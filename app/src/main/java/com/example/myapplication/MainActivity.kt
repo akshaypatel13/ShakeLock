@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -44,8 +45,19 @@ class MainActivity : AppCompatActivity() {
 
         }
         Handler().postDelayed({
+            val check_app: SharedPreferences =this.getSharedPreferences("app_intro",0)
+            var first_app=check_app.getString("first","0")
             val intent = Intent(this, AppIntro::class.java)
             startActivity(intent)
+            if(first_app.equals("0")) {
+
+            }else{
+                val intent = Intent(this, Dashboard::class.java)
+                startActivity(intent)
+            }
         }, 2000)
+    }
+    override fun onBackPressed() {
+
     }
 }

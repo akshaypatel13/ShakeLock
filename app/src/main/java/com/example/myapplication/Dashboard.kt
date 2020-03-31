@@ -1,11 +1,14 @@
 package com.example.myapplication
 
+import android.Manifest
 import android.content.Intent
 import android.content.SharedPreferences
 import androidx.biometric.BiometricPrompt
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
+import com.kotlinpermissions.KotlinPermissions
 import kotlinx.android.synthetic.main.activity_dashboard.*
 import kotlinx.android.synthetic.main.activity_main.gifImageView
 import org.apache.commons.io.IOUtils
@@ -17,10 +20,21 @@ class Dashboard : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        KotlinPermissions.with(this) // where this is an FragmentActivity instance
+            .permissions(Manifest.permission.USE_BIOMETRIC,Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            .onAccepted { permissions ->
+            }
+            .onDenied { permissions ->
+                //List of denied permissions
+            }
+            .onForeverDenied { permissions ->
+                //List of forever denied permissions
+            }
+            .ask()
         setContentView(R.layout.activity_dashboard)
 
         try{
-            var inp_st: InputStream =assets.open("pass.gif")
+            var inp_st: InputStream =assets.open("gif1.gif")
             var bts:ByteArray= IOUtils.toByteArray(inp_st)
             gifImageView.setBytes(bts)
             gifImageView.startAnimation()
@@ -71,7 +85,6 @@ class Dashboard : AppCompatActivity() {
             }
         })
 
-
         val info=BiometricPrompt.PromptInfo.Builder()
             .setNegativeButtonText("a")
             .setDescription("aa")
@@ -79,6 +92,7 @@ class Dashboard : AppCompatActivity() {
             .build()
 
         btn_finger.setOnClickListener {
+
             finger_prompt.authenticate(info)
         }
 
@@ -112,6 +126,9 @@ class Dashboard : AppCompatActivity() {
         }
 
 
+
+    }
+    override fun onBackPressed() {
 
     }
 }

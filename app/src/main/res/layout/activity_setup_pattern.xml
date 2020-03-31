@@ -4,7 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_bgd"
     tools:context=".SetupPattern">
+
+    <com.felipecsl.gifimageview.library.GifImageView
+        android:id="@+id/gifImage5"
+        android:layout_width="199dp"
+        android:layout_height="176dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="32dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.andrognito.patternlockview.PatternLockView
         android:id="@+id/pattern_lock_screen"
@@ -14,27 +31,33 @@
         android:layout_marginTop="88dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="50dp"
-        app:correctStateColor="@color/colorPrimary"
+        app:correctStateColor="#7d8593"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input"
         app:layout_constraintVertical_bias="1.0"
-        app:normalStateColor="@color/colorPrimary"
-        app:wrongStateColor="@color/errorColor" />
+        app:normalStateColor="#3a6684"
+        app:wrongStateColor="#282f3b" />
 
     <TextView
         android:id="@+id/input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="173dp"
-        android:layout_marginTop="256dp"
+        android:layout_marginLeft="173dp"
+        android:layout_marginTop="38dp"
         android:layout_marginEnd="179dp"
+        android:layout_marginRight="179dp"
+        android:layout_marginBottom="5dp"
         android:text="Setup Pattern"
+        android:textColor="#3a6684"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/pattern_lock_screen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.407"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/gifImage5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

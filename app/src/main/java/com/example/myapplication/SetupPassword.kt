@@ -6,7 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import kotlinx.android.synthetic.main.activity_input_pattern.*
 import kotlinx.android.synthetic.main.activity_setup_password.*
+import org.apache.commons.io.IOUtils
+import java.io.IOException
+import java.io.InputStream
 import java.util.regex.Pattern
 
 class SetupPassword : AppCompatActivity() {
@@ -14,6 +18,14 @@ class SetupPassword : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setup_password)
+
+        try{
+            var inp_st: InputStream =assets.open("app.gif")
+            var bts:ByteArray= IOUtils.toByteArray(inp_st)
+            gifImage4.setBytes(bts)
+            gifImage4.startAnimation()
+        }catch(exc: IOException){
+        }
 
 
         //https://stackoverflow.com/questions/12586340/regex-to-find-special-characters-in-java/12586471
@@ -79,4 +91,5 @@ class SetupPassword : AppCompatActivity() {
         }
 
     }
+
 }

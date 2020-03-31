@@ -7,12 +7,25 @@ import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_input_pin.*
 import com.andrognito.pinlockview.PinLockListener
+import kotlinx.android.synthetic.main.activity_input_pattern.*
+import org.apache.commons.io.IOUtils
+import java.io.IOException
+import java.io.InputStream
 
 class InputPin : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_input_pin)
+
+        try{
+            var inp_st: InputStream =assets.open("app.gif")
+            var bts:ByteArray= IOUtils.toByteArray(inp_st)
+            gifImage3.setBytes(bts)
+            gifImage3.startAnimation()
+        }catch(exc: IOException){
+        }
+
         Toast.makeText(applicationContext,"Input",Toast.LENGTH_SHORT).show()
         pin_input.attachIndicatorDots(ind_dots_input)
         pin_input.setPinLockListener(object :PinLockListener{
@@ -33,4 +46,5 @@ class InputPin : AppCompatActivity() {
 
         })
     }
+
 }
