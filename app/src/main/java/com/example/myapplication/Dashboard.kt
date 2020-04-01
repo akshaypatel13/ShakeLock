@@ -47,6 +47,7 @@ class Dashboard : AppCompatActivity() {
         var user_inp=check_user.getString("user_pattern","0")
         var user_pin_inp=check_user.getString("user_pin","0")
         var user_password_inp=check_user.getString("user_password","0")
+        var set_secirity_inp = check_user.getString("user_security","0")
         //------------------Pattern-----------------------
 
         btn_pattern.setOnClickListener {
@@ -125,7 +126,11 @@ class Dashboard : AppCompatActivity() {
             }
         }
 
-
+        //--------------------Set Security Key------------------
+        set_security_key.setOnClickListener {
+            val intent = Intent(applicationContext,SetSecurityKey::class.java)
+            startActivity(intent)
+        }
 
     }
     override fun onBackPressed() {

@@ -241,7 +241,7 @@
                             app:cardElevation="5dp">
 
                             <Button
-                                android:id="@+id/btn_rst_pass"
+                                android:id="@+id/set_security_key"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:background="#00000000" />
@@ -254,8 +254,8 @@
 
                                 <ImageView
                                     android:id="@+id/img_rst_pass"
-                                    android:layout_width="80dp"
-                                    android:layout_height="80dp"
+                                    android:layout_width="56dp"
+                                    android:layout_height="88dp"
                                     android:layout_marginTop="5dp"
                                     android:src="@drawable/resetpass1" />
 
@@ -263,7 +263,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
-                                    android:text="Reset Password"
+                                    android:text="Set Security Key"
                                     android:textColor="#000000"
                                     android:textSize="20sp" />
 
