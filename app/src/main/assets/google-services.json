@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "245042846732",
+    "firebase_url": "https://shakelock-93148.firebaseio.com",
+    "project_id": "shakelock-93148",
+    "storage_bucket": "shakelock-93148.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245042846732:android:f27b96a7ac2db12d6d2229",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245042846732-12uhp7ua56hg39cj6ji8gq3fdtsn8b9s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "d1b4751a7c2488caf0895434fdf0d0f20ab4d37d"
+          }
+        },
+        {
+          "client_id": "245042846732-imbpa647fbde83nro0e7hn3js5dprqmr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2jiVBsVOxbNVrzx1_daNWuxGcZ-foOoc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245042846732-imbpa647fbde83nro0e7hn3js5dprqmr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
