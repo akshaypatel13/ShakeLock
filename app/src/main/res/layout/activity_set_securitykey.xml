@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bgd"
+    tools:context=".SetSecurityKey">
+
+
+    <com.felipecsl.gifimageview.library.GifImageView
+        android:id="@+id/gifImage6"
+        android:layout_width="199dp"
+        android:layout_height="176dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="32dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="275dp"
+        android:layout_height="246dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.633"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.601">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="278dp"
+                android:layout_height="40dp"
+                android:layout_column="0"
+                android:text="Please enter your Email ID : "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="50dp"
+                tools:layout_editor_absoluteY="47dp" />
+
+        </TableRow>
+
+        <EditText
+            android:id="@+id/emailID"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint="Enter your email ID"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:typeface="sans"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="85dp">
+
+            <requestFocus />
+        </EditText>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="278dp"
+                android:layout_height="40dp"
+                android:layout_column="0"
+                android:text="Please enter your Secret Key: "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                tools:ignore="DuplicateIds,MissingConstraints"
+                tools:layout_editor_absoluteX="50dp"
+                tools:layout_editor_absoluteY="47dp" />
+        </TableRow>
+
+        <EditText
+            android:id="@+id/secretKey"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint="Enter your secret key"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:typeface="sans"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="85dp">
+
+            <requestFocus />
+
+        </EditText>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="278dp"
+                android:layout_height="40dp"
+                android:layout_column="0"
+                android:text="Please Re-enter your Secret Key : "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="50dp"
+                tools:layout_editor_absoluteY="47dp" />
+        </TableRow>
+
+        <EditText
+            android:id="@+id/repeatKey"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint="Re-enter your secret key"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:typeface="sans"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="85dp">
+
+            <requestFocus />
+
+        </EditText>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/Set_Key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="44dp"
+        android:text="Set Private Key"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/DashboardLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="60dp"
+        android:text="Go back to Dashboard"
+        app:layout_constraintStart_toEndOf="@+id/Set_Key"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
