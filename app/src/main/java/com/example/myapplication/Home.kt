@@ -40,30 +40,9 @@ class Home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-
-        val check: SharedPreferences = this.getSharedPreferences("final_uris", 0)
-        val gson1 = Gson()
-        var ur = check.getString("urri", null)
-        if (ur != null) {
-            ur = ur.substring(2,ur.length-2)
-        }
-        Log.i("SP",ur)
-        var urls = ur?.let { stringToWords(it) }
-        Log.i("SP_123", urls?.toString())
-        var iter = urls?.iterator()
         var hs = HashSet<String>()
-        var path = "/storage/emulated/0"
+        var path = "/storage/emulated/0/"
 
-        while (iter?.hasNext()!!)
-        {
-            var demo = iter.next()
-            demo = demo.replace(" ","")
-            //            var test = demo.substring(demo.indexOf("%3A"))
-            //            demo = URLDecoder.decode(test)
-            var fullPath = path+demo
-            Log.i("SP_FP", fullPath)
-            hs.add(fullPath)
-        }
 
         var savePath = "/storage/emulated/0/Encrypted"
         myDir = File(savePath)
@@ -82,16 +61,61 @@ class Home : AppCompatActivity() {
                 .setAction(Intent.ACTION_GET_CONTENT)
                 .putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
             startActivityForResult(Intent.createChooser(intent, "Select a file"), 111)
+
+
+
+
         }
 
         btn_dec!!.setOnClickListener {
+            val check: SharedPreferences = this.getSharedPreferences("final_uris", 0)
+            var ur = check.getString("urri", null)
+            if (ur != null) {
+                ur = ur.substring(2,ur.length-2)
+            }
+            Log.i("SP",ur)
+            var urls = ur?.let { stringToWords(it) }
+            Log.i("SP_123", urls?.toString())
+            var iter = urls?.iterator()
 
+
+            while (iter?.hasNext()!!)
+            {
+                var demo = iter.next()
+                demo = demo.replace(" ","")
+                //            var test = demo.substring(demo.indexOf("%3A"))
+                //            demo = URLDecoder.decode(test)
+                var fullPath = path+demo
+                Log.i("SP_FP", fullPath)
+                hs.add(fullPath)
+            }
             Log.d("checking", hs.toString())
             Log.d("checking", savePath)
             decrypt(hs, savePath)
         }
 
         btn_enc.setOnClickListener{
+            val check: SharedPreferences = this.getSharedPreferences("final_uris", 0)
+            var ur = check.getString("urri", null)
+            if (ur != null) {
+                ur = ur!!.substring(2, ur!!.length-2)
+            }
+            Log.i("SP",ur)
+            var urls = ur?.let { stringToWords(it) }
+            Log.i("SP_123", urls?.toString())
+            var iter = urls?.iterator()
+
+
+            while (iter?.hasNext()!!)
+            {
+                var demo = iter.next()
+                demo = demo.replace(" ","")
+                //            var test = demo.substring(demo.indexOf("%3A"))
+                //            demo = URLDecoder.decode(test)
+                var fullPath = path+demo
+                Log.i("SP_FP", fullPath)
+                hs.add(fullPath)
+            }
             Log.d("checking", hs.toString())
             Log.d("checking", savePath)
             encrypt(hs, savePath)
@@ -116,12 +140,10 @@ class Home : AppCompatActivity() {
                     var currentItem = 0
                     while (currentItem < count) {
                         var imageUri: Uri = data.getClipData()!!.getItemAt(currentItem).getUri()
-                        Log.d("uri",imageUri.toString())
                         //do something with the image (save it to some directory or whatever you need to do with it here)
                         var demo = imageUri.getPath()?.toUri().toString()
                         demo = demo.substring(demo.indexOf(":") + 1)
 
-                        Log.d("abc",demo.toString())
                         data2.add(demo.toUri())
                         currentItem = currentItem + 1;
                         Log.d("abb", data2.toString())
@@ -132,7 +154,6 @@ class Home : AppCompatActivity() {
                 } else if (data?.getData() != null) {
 
                     val FilePath = data.getData()!!.getPath()
-                    Log.d("file",FilePath)
                     var demo =FilePath?.toUri()!!.toString()
                     demo = demo.substring(demo.indexOf(":") + 1)
 
@@ -154,7 +175,6 @@ class Home : AppCompatActivity() {
     private fun add_to_List(list: ArrayList<Uri>) {
 
         uris=list
-        Log.d("abc",uris.toString())
         val check: SharedPreferences =this.getSharedPreferences("final_uris",0)
         val editor:SharedPreferences.Editor=check.edit()
         val gson = Gson()
@@ -191,7 +211,6 @@ class Home : AppCompatActivity() {
         while (Fpath.hasNext()) {
             var temp = Fpath.next()
             var fileName = temp.substring(temp.lastIndexOf("/") + 1)
-            Log.i("SP_fileName", fileName)
             Log.i("SP_fileName", fileName)
             Log.i("SP_temp", temp)
             Log.i("Hash", hs.toString())
