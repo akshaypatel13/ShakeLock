@@ -31,15 +31,15 @@
         android:layout_marginTop="88dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="50dp"
-        app:correctStateColor="#7d8593"
+        app:correctStateColor="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input"
         app:layout_constraintVertical_bias="1.0"
-        app:normalStateColor="#3a6684"
-        app:wrongStateColor="#282f3b" />
+        app:normalStateColor="@color/white"
+        app:wrongStateColor="@color/red" />
 
     <TextView
         android:id="@+id/input"
@@ -52,7 +52,7 @@
         android:layout_marginRight="179dp"
         android:layout_marginBottom="5dp"
         android:text="Setup Pattern"
-        android:textColor="#3a6684"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/pattern_lock_screen"
         app:layout_constraintEnd_toEndOf="parent"

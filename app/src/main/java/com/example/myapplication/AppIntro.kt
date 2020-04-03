@@ -22,7 +22,7 @@ class AppIntro : AppCompatActivity() {
 
         val check_app: SharedPreferences =getSharedPreferences("app_intro",0)
         val editor: SharedPreferences.Editor=check_app.edit()
-        editor.putString("first","0")
+        editor.putString("first","1")
         editor.apply()
         editor.commit()
 

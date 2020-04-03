@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import kotlinx.android.synthetic.main.activity_input_pattern.*
 import kotlinx.android.synthetic.main.activity_setup_password.*
 import org.apache.commons.io.IOUtils
 import java.io.IOException
@@ -22,8 +21,8 @@ class SetupPassword : AppCompatActivity() {
         try{
             var inp_st: InputStream =assets.open("app.gif")
             var bts:ByteArray= IOUtils.toByteArray(inp_st)
-            gifImage4.setBytes(bts)
-            gifImage4.startAnimation()
+            gi.setBytes(bts)
+            gi.startAnimation()
         }catch(exc: IOException){
         }
 
@@ -34,21 +33,31 @@ class SetupPassword : AppCompatActivity() {
         password_setup.addTextChangedListener(object :TextWatcher{
 
             override fun afterTextChanged(s: Editable?) {
+                password.error=""
                 var password_set=password_setup.text.toString()
                 var matcher=final.matcher(password_set)
+
                 if(matcher.find()){
-                    password.error=""
-                }else{
-                    password.error="abcd"
+                     password.error=""
+                     }else{
+                    password.error="The password must contain one uppercase, lowercase, numeric value and length must be more than 8."
                 }
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                password.error=""
+//                password.error=""
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                password.error=""
+
+//                var password_set=password_setup.text.toString()
+//                var matcher=final.matcher(password_set)
+//                Toast.makeText(applicationContext,matcher.find().toString(),Toast.LENGTH_LONG).show()
+//                if(matcher.find()){
+//                    password.error=""
+//                }else{
+//                    password.error="The password must contain one uppercase, lowercase, numeric value and length must be more than 8."
+//                }
             }
 
         })
@@ -77,7 +86,7 @@ class SetupPassword : AppCompatActivity() {
 
 
 
-        submit.setOnClickListener {
+        sendEmailButton.setOnClickListener {
             val check_user: SharedPreferences =getSharedPreferences("user_log",0)
             val editor: SharedPreferences.Editor=check_user.edit()
             val pass=password_reenter_setup.text

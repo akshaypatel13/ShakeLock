@@ -34,10 +34,10 @@ class Dashboard : AppCompatActivity() {
         setContentView(R.layout.activity_dashboard)
 
         try{
-            var inp_st: InputStream =assets.open("gif1.gif")
+            var inp_st: InputStream =assets.open("app3.gif")
             var bts:ByteArray= IOUtils.toByteArray(inp_st)
-            gifImageView.setBytes(bts)
-            gifImageView.startAnimation()
+            giff.setBytes(bts)
+            giff.startAnimation()
         }catch(exc: IOException){
         }
 
@@ -61,6 +61,12 @@ class Dashboard : AppCompatActivity() {
                 startActivity(intent)
             }
 
+        }
+
+        //Firebase
+        btn_rst_pass.setOnClickListener {
+            val i=Intent(applicationContext,SetSecurityKey::class.java)
+            startActivity(i)
         }
 
 
@@ -123,6 +129,12 @@ class Dashboard : AppCompatActivity() {
                 val intent = Intent(applicationContext, InputPassword::class.java)
                 startActivity(intent)
             }
+        }
+
+        //HelpandDoc
+        btn_help.setOnClickListener {
+            val i=Intent(applicationContext,HelpAndDocumentation::class.java)
+            startActivity(i)
         }
 
 
