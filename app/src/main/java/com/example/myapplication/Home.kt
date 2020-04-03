@@ -6,12 +6,12 @@ import android.content.SharedPreferences
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Environment
 import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.core.net.toUri
 import com.example.shakelock.MyEncrypter
+import com.github.tbouron.shakedetector.library.ShakeDetector
 import com.google.gson.Gson
 import java.io.File
 import java.io.FileInputStream
@@ -42,26 +42,27 @@ class Home : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         val check: SharedPreferences = this.getSharedPreferences("final_uris", 0)
+        val gson1 = Gson()
         var ur = check.getString("urri", null)
         if (ur != null) {
             ur = ur.substring(2,ur.length-2)
         }
-
+        Log.i("SP",ur)
         var urls = ur?.let { stringToWords(it) }
+        Log.i("SP_123", urls?.toString())
         var iter = urls?.iterator()
         var hs = HashSet<String>()
-        var path = "/storage/emulated/0/"
+        var path = "/storage/emulated/0"
 
-        if(iter!=null) {
-            while (iter?.hasNext()!!) {
-                var demo = iter.next()
-                demo = demo.replace(" ", "")
-                //            var test = demo.substring(demo.indexOf("%3A"))
-                //            demo = URLDecoder.decode(test)
-                var fullPath = path + demo
-                Log.i("SP_FP", fullPath)
-                hs.add(fullPath)
-            }
+        while (iter?.hasNext()!!)
+        {
+            var demo = iter.next()
+            demo = demo.replace(" ","")
+            //            var test = demo.substring(demo.indexOf("%3A"))
+            //            demo = URLDecoder.decode(test)
+            var fullPath = path+demo
+            Log.i("SP_FP", fullPath)
+            hs.add(fullPath)
         }
 
         var savePath = "/storage/emulated/0/Encrypted"
@@ -125,8 +126,7 @@ class Home : AppCompatActivity() {
                         currentItem = currentItem + 1;
                         Log.d("abb", data2.toString())
                         add_to_List(data2)
-                        setText(data2.toString())
-//                        txt_pathShow!!.text = data2.toString()
+                        txt_pathShow!!.text = data2.toString()
                     }
                     //single
                 } else if (data?.getData() != null) {
@@ -163,6 +163,7 @@ class Home : AppCompatActivity() {
         editor.commit()
         editor.apply()
 
+
     }
 
     override fun onBackPressed() {
@@ -170,7 +171,20 @@ class Home : AppCompatActivity() {
         startActivity(intent)
     }
 
+    override fun onResume() {
+        super.onResume()
+        ShakeDetector.start()
+    }
 
+    override fun onStop() {
+        super.onStop()
+        ShakeDetector.stop()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        ShakeDetector.destroy()
+    }
 
     fun encrypt(hs: HashSet<String>, savePath: String) {
         var Fpath = hs.iterator()
@@ -199,8 +213,6 @@ class Home : AppCompatActivity() {
 
     fun decrypt(hs: HashSet<String>, savePath: String){
         var Fpath = hs.iterator()
-        val data=""
-        setText(data)
         while (Fpath.hasNext()) {
             var temp = Fpath.next()
             var fileName = temp.substring(temp.lastIndexOf("/") + 1)
@@ -223,13 +235,6 @@ class Home : AppCompatActivity() {
                 encFile.delete()
                 Toast.makeText(applicationContext, "decryted", Toast.LENGTH_SHORT).show()
 
-                //emptyshared
-                val check: SharedPreferences =this.getSharedPreferences("final_uris",0)
-                val ed:SharedPreferences.Editor=check.edit()
-                ed.putString("urri","")
-                ed.commit()
-                ed.apply()
-
             } catch (e: Exception) {
                 Toast.makeText(applicationContext, "Unable to decrypt", Toast.LENGTH_SHORT)
                     .show()
@@ -239,9 +244,6 @@ class Home : AppCompatActivity() {
         hs.clear()
     }
 
-    fun setText(data2:String)
-    {
-        txt_pathShow!!.text = data2
-    }
+
 
 }

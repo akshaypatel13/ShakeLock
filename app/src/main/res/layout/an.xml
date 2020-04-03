@@ -102,7 +102,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/setpass"
+        android:id="@+id/sendEmailButton"
         android:layout_width="224dp"
         android:layout_height="52dp"
         android:layout_marginTop="40dp"

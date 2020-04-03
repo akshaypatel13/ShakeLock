@@ -40,7 +40,7 @@ class SetSecurityKey : AppCompatActivity() {
         val emailField =findViewById<EditText>(R.id.recipientEId)
         val secretKeyField = findViewById<EditText>(R.id.subjectLine)
         val repeatKeyField = findViewById<EditText>(R.id.message)
-        val setKeyBtn = findViewById<Button>(R.id.setpass)
+        val setKeyBtn = findViewById<Button>(R.id.sendEmailButton)
 
 
         setKeyBtn.setOnClickListener {
