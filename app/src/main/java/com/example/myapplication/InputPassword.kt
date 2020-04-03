@@ -8,6 +8,8 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_input_password.*
+import kotlinx.android.synthetic.main.activity_input_pattern.*
+import kotlinx.android.synthetic.main.activity_setup_password.submit
 import org.apache.commons.io.IOUtils
 import java.io.IOException
 import java.io.InputStream

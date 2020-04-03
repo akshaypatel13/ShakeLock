@@ -2,11 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
 
-    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
 
     <application
         android:allowBackup="true"
@@ -15,14 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
-        <activity android:name=".HelpAndDocumentation" />
-        <activity android:name=".ContactUs" />
-        <activity android:name=".SetSecurityKey" />
-
-
-        <activity android:name=".InputPassword" />
+        <activity android:name=".InputPassword"></activity>
         <activity android:name=".SetupPassword" />
         <activity android:name=".InputPin" />
         <activity android:name=".SetupPin" />

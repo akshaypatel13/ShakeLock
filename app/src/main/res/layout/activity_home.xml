@@ -7,61 +7,16 @@
     tools:context=".Home">
 
     <Button
-        android:id="@+id/btn_filePicker"
+        android:id="@+id/pick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginLeft="161dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginRight="162dp"
         android:text="Pick"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.216"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.222" />
-
-    <TextView
-        android:id="@+id/txt_path"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_filePicker" />
-
-    <Button
-        android:id="@+id/btn_dec"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_filePicker"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.222" />
-
-    <Button
-        android:id="@+id/btn_enc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Encrypt"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/voice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="155dp"
-        android:layout_marginLeft="155dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="168dp"
-        android:layout_marginRight="168dp"
-        android:layout_marginBottom="108dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_path" />
 </androidx.constraintlayout.widget.ConstraintLayout>
