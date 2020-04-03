@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_contact_us.*
-import kotlinx.android.synthetic.main.activity_help_and_documentation.*
 import org.apache.commons.io.IOUtils
 import java.io.IOException
 import java.io.InputStream
@@ -25,7 +24,7 @@ class ContactUs : AppCompatActivity() {
             gi.startAnimation()
         }catch(exc: IOException){
         }
-            sendEmailButton.setOnClickListener {
+            setpass.setOnClickListener {
 
                 var recepient = recipientEId.text.toString().trim()
                 var message = message.text.toString().trim()

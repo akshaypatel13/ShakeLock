@@ -86,7 +86,7 @@ class SetupPassword : AppCompatActivity() {
 
 
 
-        sendEmailButton.setOnClickListener {
+        setpass.setOnClickListener {
             val check_user: SharedPreferences =getSharedPreferences("user_log",0)
             val editor: SharedPreferences.Editor=check_user.edit()
             val pass=password_reenter_setup.text
