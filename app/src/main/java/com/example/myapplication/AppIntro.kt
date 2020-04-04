@@ -1,12 +1,17 @@
 package com.example.myapplication
 
+import android.Manifest
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.kotlinpermissions.KotlinPermissions
 import com.ramotion.paperonboarding.PaperOnboardingFragment
 import com.ramotion.paperonboarding.PaperOnboardingPage
 import kotlinx.android.synthetic.main.activity_app_intro.*
+import kotlinx.android.synthetic.main.activity_setup_password.*
 
 
 class AppIntro : AppCompatActivity() {
@@ -15,20 +20,27 @@ class AppIntro : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_app_intro)
 
+        val check_app: SharedPreferences =getSharedPreferences("app_intro",0)
+        val editor: SharedPreferences.Editor=check_app.edit()
+        editor.putString("first","1")
+        editor.apply()
+        editor.commit()
+
+
         val scr1 = PaperOnboardingPage(
-            "Hotels",
-            "All hotels and hostels are sorted by hospitality rating",
-            Color.parseColor("#678FB4"), R.drawable.icon_file_doc, R.drawable.dot_empty
+            "Locking Styles",
+            "Choose one from different locking mechanisms: Pattern, Pin, Password, Biometric",
+            Color.parseColor("#678FB4"), R.drawable.patt, R.drawable.dot_empty
         )
         val scr2 = PaperOnboardingPage(
-            "Banks",
-            "We carefully verify all banks before add them into the app",
-            Color.parseColor("#65B0B4"), R.drawable.ic_play_icon, R.drawable.icon_file_pdf
+            "Encrypt/Decrypt",
+            "Hide/Unhide images stored in the local storage of the device.",
+            Color.parseColor("#65B0B4"), R.drawable.enc, R.drawable.dot_empty
         )
         val scr3 = PaperOnboardingPage(
-            "Stores",
-            "All local stores are categorized for your convenience",
-            Color.parseColor("#9B90BC"), R.drawable.icon_file_ppt, R.drawable.icon_file_xls
+            "Help And Documentation",
+            "Any information related to the working of this android is provided in Help section.",
+            Color.parseColor("#9B90BC"), R.drawable.help, R.drawable.dot_empty
         )
 
 
@@ -54,5 +66,8 @@ class AppIntro : AppCompatActivity() {
 
         ft.add(R.id.fragment, onBoardingFragment)
         ft.commit()
+    }
+    override fun onBackPressed() {
+
     }
 }

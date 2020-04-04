@@ -12,31 +12,36 @@ class ExpandableTextViewAdapter(var context: Context): BaseExpandableListAdapter
 
 
     var faqs:Array<String> = arrayOf(
-        "What if I forget my app password/pin/pattern?",
-        "What if I factory reset my phone?",
-        "What will happen to my encrypted data if I uninstall the application?",
-        "How can I reset my phone?",
         "How to hide files?",
-        "How do I recover my secret pin? if I forget that.",
+        "How do I unlock images?",
         "Where do my images exactly go after locking?",
-        "How do I unlock images?"
+        "What type of files can I hide",
+        "How do I recover my secret pin? if I forget that.",
+        "What will happen to my encrypted data if I uninstall the application?",
+        "What if I factory reset my phone?"
     )
 
+    var answers = arrayOf<Array<String>>(
+        arrayOf<String>("After you have set up a lock, you can easily go to encrypt, select all the files that you wish to hide and they will no longer be displayed.")
+        , arrayOf<String>("You can go to decrypt and easily unhide all the files and they will be displayed in your phone.")
+        , arrayOf<String>("Your files remain on the same location on your phone even after they are hidden. We do not upload it to cloud.")
+        , arrayOf<String>("You can lock any file that you wish to with this application")
+        , arrayOf<String>("Only the correct pin can unlock the data and we cant unlock your data without your pin")
+        , arrayOf<String>("Your files will still be on your phone, but for them to be visible you will have to install the application and decrypt them")
+        , arrayOf<String>("You will lose all your hidden files if you factory reset your phone"))
 
 
-    var answers = arrayOf<Array<String>>(arrayOf<String>("Answer 1, answer1"), arrayOf<String>("answer 2"), arrayOf<String>("answeer 3"), arrayOf<String>("answeer 4"), arrayOf<String>("answeer 5")
-        , arrayOf<String>("answeer 6"), arrayOf<String>("answeer 7"), arrayOf<String>("answeer 8"))
 
 
 
 
 
     override fun getGroup(groupPosition: Int): Any {
-            return faqs[groupPosition]
+        return faqs[groupPosition]
     }
 
     override fun isChildSelectable(groupPosition: Int, childPosition: Int): Boolean {
-            return false
+        return false
     }
 
     override fun hasStableIds(): Boolean {

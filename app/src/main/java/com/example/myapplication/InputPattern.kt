@@ -9,6 +9,10 @@ import kotlinx.android.synthetic.main.activity_input_pattern.*
 import com.andrognito.patternlockview.PatternLockView
 import com.andrognito.patternlockview.listener.PatternLockViewListener
 import com.andrognito.patternlockview.utils.PatternLockUtils
+import kotlinx.android.synthetic.main.activity_main.*
+import org.apache.commons.io.IOUtils
+import java.io.IOException
+import java.io.InputStream
 
 class InputPattern : AppCompatActivity() {
 
@@ -16,6 +20,14 @@ class InputPattern : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_input_pattern)
         Toast.makeText(applicationContext,"Input",Toast.LENGTH_LONG).show()
+
+        try{
+            var inp_st: InputStream =assets.open("app.gif")
+            var bts:ByteArray= IOUtils.toByteArray(inp_st)
+            gifImage2.setBytes(bts)
+            gifImage2.startAnimation()
+        }catch(exc: IOException){
+        }
 
         pattern_input.addPatternLockListener(object :PatternLockViewListener{
             override fun onComplete(pattern: MutableList<PatternLockView.Dot>?) {
@@ -49,4 +61,6 @@ class InputPattern : AppCompatActivity() {
         })
 
     }
+
+
 }
