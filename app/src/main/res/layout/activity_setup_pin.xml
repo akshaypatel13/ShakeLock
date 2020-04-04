@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bgd"
+    tools:context=".SetupPin">
+
+
+    <com.felipecsl.gifimageview.library.GifImageView
+        android:id="@+id/gifImage6"
+        android:layout_width="199dp"
+        android:layout_height="176dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="32dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.andrognito.pinlockview.IndicatorDots
+        android:id="@+id/ind_dots_setup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:outlineAmbientShadowColor="@color/white"
+        app:dotDiameter="12dp"
+        app:dotSpacing="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/pin_setup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setup" />
+
+    <com.andrognito.pinlockview.PinLockView
+        android:id="@+id/pin_setup"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        app:keypadButtonSize="72dp"
+        app:keypadDeleteButtonPressedColor="#C8C8C8"
+        app:keypadHorizontalSpacing="36dp"
+        app:keypadShowDeleteButton="false"
+        app:keypadTextColor="@color/white"
+        app:keypadTextSize="15dp"
+        app:keypadVerticalSpacing="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:pinLength="4"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="30dp" />
+
+    <TextView
+        android:id="@+id/setup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="183dp"
+        android:text="Setup Pin"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gifImage6"
+        android:layout_marginRight="183dp"
+        android:layout_marginLeft="168dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

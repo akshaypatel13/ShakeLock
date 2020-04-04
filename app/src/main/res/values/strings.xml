@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ShakeLock</string>
+    <string name="care_to_be_aware">Care to be Aware!</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="configure">Configure</string>
+
 </resources>
