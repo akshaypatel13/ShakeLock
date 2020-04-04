@@ -1,0 +1,44 @@
+
+
+//////////////////////ShakeLock////////////////////////////////////////
+
+
+References:
+
+
+	images:
+		1. Pattern - ProSymbols. (2020). “Protection 2” by ProSymbols. Iconfinder. https://www.iconfinder.com/icons/3425156/cybersecurity_lock-screen_pattern_passcode_pattern_pattern_lock_ui_unlocking_icon
+		2. Finger - Download Circle Logo. (2019). KissClipart. https://www.kissclipart.com/icon-clipart-computer-icons-fingerprint-lock-scree-7j8ebi/
+		3. Password - IMGBIN.com. (2018). Password Manager Computer Icons PNG - Free Download. IMGBIN.Com. https://imgbin.com/png/Vw7PJHRx/password-manager-computer-icons-png
+		4. Secret Key - Password Svg Png Icon Free Download - Reset Password Icon Png Clipart (#2033374) - PinClipart. (2018). PinClipart.Com. https://www.pinclipart.com/pindetail/xbwmbi_password-svg-png-icon-free-download-reset-password/
+		5. Help - File Or Document Icon Icons Png - Certificate Of Analysis Icon, Transparent Png(1774x2400) - PngFind. (2019). PngFind.Com. https://www.pngfind.com/mpng/hbRwxmo_file-or-document-icon-icons-png-certificate-of/
+		6. lock gif - Lock Check | Animation reference, Motion design, Interactive design. (2015). Pinterest; Pinterest. https://www.pinterest.ca/pin/91690542389700517/
+		7. splash screen GIF- lock gif - Google Search. (2011). Google.Com. https://www.google.com/search?q=lock+gif&tbm=isch&hl=en&chips=q:animated+lock+gif,g_1:animated:pG3dzziO3iY%3D,g_1:gif+animation+cyber+security:YX3BqtVYrQI%3D&rlz=1C1CHBF_enIN830IN830&hl=en&ved=2ahUKEwiguIHD_f_nAhUBWt8KHR50BAAQ4lYoAnoECAEQGg&biw=1349&bih=608#imgrc=zMT8AKmaFrKO7M
+		8. Dashboard GIF- Unlock Animaiton in 2020 | Gif collection, Animation, Creative industries. (2020, February 25). Pinterest; Pinterest. https://www.pinterest.ca/pin/9499849192814292/
+		9. File upload - LoveUI.co. (2020). “Acticons” by LoveUI.co. Iconfinder. https://www.iconfinder.com/icons/335196/document_upload_icon
+		10. Encrypt - https://www.facebook.com/theflaticon. (2020). Flaticon. Flaticon. https://www.flaticon.com/premium-icon/encrypted-data_1990518
+		11. Decrypt - https://www.facebook.com/theflaticon. (2020). Flaticon. Flaticon. https://www.flaticon.com/premium-icon/decrypt_1990511
+		12. help- Elionas. (2016, June 15). Info Icon Button - Free image on Pixabay. Pixabay.Com. https://pixabay.com/illustrations/info-icon-button-web-help-blue-1459077/
+		13. Help and contact us -
+                        a) sriram.umashankar. (2014, February 18). Justice to shaking mobile. TECHYHUMAN. http://www.techyhuman.com/justice-to-mobile-shaking/ 
+			b) Amit Kulkarni. (2017, October 6). Encrypting/Decrypting a file using OpenSSL EVP. Medium; Medium. https://medium.com/@amit.kulkarni/encrypting-decrypting-a-file-using-openssl-evp-b26e0e4d28d4 
+			c) HelpNDoc Help Authoring Tool - Create Help Files, User Manuals and eBooks. (2020, March 25). Helpndoc.Com. https://www.helpndoc.com/
+			d) How to Create FAQs That Turn Prospects into Customers. (2020, January 3). CRM Blog: Articles, Tips and Strategies by SuperOffice. https://www.superoffice.com/blog/faq/ 
+
+	Code:
+		1. Fetch Multiple paths and uris: CS Enthusiast. (2019, May 31). Unable to get bitmap from the following uri : Uri imageUri = data.getClipData().getItemAt(i).getUri(). Stack Overflow. https://stackoverflow.com/questions/56388764/unable-to-get-bitmap-from-the-following-uri-uri-imageuri-data-getclipdata 
+		2. Splash screen- Taimoor Sikander - Coding with T. (2020). Android Splash Screen with Animations in Android Studio | 2020 Material Design [YouTube Video]. In YouTube. https://www.youtube.com/watch?v=JLIFqqnSNmg
+		3. Appintro - Ramotion. (2019, November 9). Ramotion/paper-onboarding. GitHub. https://github.com/Ramotion/paper-onboarding
+		4. Pattern - aritraroy. (2018, March 3). aritraroy/PatternLockView. GitHub. https://github.com/aritraroy/PatternLockView
+		5. Pin - aritraroy. (2018, May 20). aritraroy/PinLockView. GitHub. https://github.com/aritraroy/PinLockView
+		6. Biometric - Natig Babayev. (2019). Fingerprint Authentication using BiometricPrompt Compat. Medium; MindOrks. https://medium.com/mindorks/fingerprint-authentication-using-biometricprompt-compat-1466365b4795
+		7. Help - a) Atif Pervaiz. (2020). Send Email using Intent - Android Studio - Kotlin [YouTube Video]. In YouTube. https://www.youtube.com/watch?v=9y25slI68S8
+			  b)Byron System Developer. (2020). Android Studio: Expand and Collapse a TextView [YouTube Video]. In YouTube. https://www.youtube.com/watch?v=H8g0S8LFgCU
+	                  c) CodeAndroid. (2020). Android Tutorial (Kotlin) - 44 - ExpandableListView [YouTube Video]. In YouTube. https://www.youtube.com/watch?v=kC8VW3novLQ
+		8. Gif Imageview - felipecsl. (2018, May 15). felipecsl/GifImageView. GitHub. https://github.com/felipecsl/GifImageView
+		9. EDMT Dev. (2020). Kotlin Android Development Tips #01 -Encrypt Decrypt Images in Android [YouTube Video]. In YouTube. https://www.youtube.com/watch?v=Y_pCLrU0z3A
+		10. Firebase Authentication - a) CodeAndroid. (2020). #1 - SignUp User with Firebase Authentication in Android using Android Studio - Kotlin [YouTube Video]. In YouTube. https://www.youtube.com/watch?v=0hkyXuKTFYY
+					      b) Authenticate with Firebase on Android Using a Custom Authentication System. (2020). Firebase. https://firebase.google.com/docs/auth/android/custom-auth
+	
+
+‌	Note: All the icons and gifs are referenced and used from opensource website with no copyright violations.

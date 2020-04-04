@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#2d2d2d</color>
+    <color name="colorPrimaryDark">#003c57</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="errorColor">#ff9494</color>
+    <color name="white">#fff</color>
+    <color name="greyish">#aaa8a8</color>
+    <color name="mine_shaft">#303030</color>
+    <color name="icon">#282F3B</color>
+    <color name="app_bgd">#003c57</color>
+    <color name="grid_color">#4ED1C1</color>
+    <color name="black">#000</color>
+    <color name="Primary">#282F3B</color>
+    <color name="PrimaryDark">#282F3B</color>
+    <color name="Accent">#FF4081</color>
+    <color name="gradient_start_color">#4C84FF</color>
+    <color name="gradient_end_color">#18a3fe</color>
+    <color name="green">#008000</color>
+    <color name="red">#FF0000</color>
 </resources>
+
+

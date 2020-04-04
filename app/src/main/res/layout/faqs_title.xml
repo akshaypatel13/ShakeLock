@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/faqsTitleView"
+        android:paddingLeft="?android:expandableListPreferredChildPaddingLeft"
+        android:paddingStart="?android:expandableListPreferredChildPaddingLeft"
+        android:minHeight="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Title Example"
+        android:textColor="@color/white"
+        android:background="@drawable/menu1"
+        android:textSize="18dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        />
+
+</LinearLayout>
