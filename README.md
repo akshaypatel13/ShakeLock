@@ -21,7 +21,7 @@ The application supports several locking mechnisms such as pin, password, biomet
 
 The Encryption/Decryption will be performed using AES algorithm based on the 128-bit MD5 key generated using the linked email and the existing encrypted file will be removed to avoid further tampering to the data.
 
-![](Gifs/enc.jpg)
+![](Gifs/final.jpg)
 
 ## Contact Us
 
