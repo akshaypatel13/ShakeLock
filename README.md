@@ -25,4 +25,6 @@ The Encryption/Decryption will be performed using AES algorithm based on the 128
 
 ## Contact Us
 
+The contact activity will help user navigate through frequently asked questions and will also allow them to contact the application development team regarding further queries/questions.
+
 ![](Gifs/contact.gif)
