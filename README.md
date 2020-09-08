@@ -2,7 +2,7 @@
 
 *CSCI-5708 Mobile Computing Group Project*
 
-The android application developed using Kotlin secures user personal/private data on a single click or gesture triggers such as shakelistener, voice input or widget. The application allows users to predefienly input their personal data that needs to be secured in case on emergency event or trigger. The project was developed using Agile Methodology and completely adheres to GitFlow to avoid merge conflicts among team members working on same feature and to maintain clean and tidy code. 
+The android application developed using Kotlin secures user personal/private data on a single click or gesture triggers such as shakelistener, voice input or widget. The application allows users to predefienly input their personal data that needs to be secured in case on emergency event or trigger. The project was developed using Agile Methodology and completely adheres to GitFlow to avoid merge conflicts among team members working on the same feature and to maintain clean and tidy code. 
 
 ## Splash, Introduction and Dashboard 
 
