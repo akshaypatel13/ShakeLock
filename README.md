@@ -8,6 +8,15 @@ The android application developed using Kotlin secures user personal/private dat
 
 The application comprises of animated splash screen followed with introductory session on implemented features using graphics and text description. The dashboard Activity allows user to select the locking mechanism that they need to bypass while performing encryption/decryption process on their data.
 
+![](Gifs/splash.gif) ![](Gifs/intro.gif) ![](Gifs/dashboard.gif)
+
+
 ## Locking Mechanisms
 
-The application supports several locking mechnisms such as 
+The application supports several locking mechnisms such as pin, password, biometrics and pattern and the implementation performs several operations based on their input.
+
+![](Gifs/pin.gif) ![](Gifs/pattern.gif) ![](Gifs/password.gif)
+
+## Contact Us
+
+![](Gifs/contact.gif)
